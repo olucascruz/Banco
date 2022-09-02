@@ -9,8 +9,10 @@ public class ContaCorrente {
 	private int numeroConta;
 	private int numeroAgencia;
 	private ArrayList<Transacao> transacoes;
+	private Cliente cliente;
 	
-	public ContaCorrente(int _numeroConta, int _numeroAgencia) {
+	public ContaCorrente(Cliente _cliente, int _numeroConta, int _numeroAgencia) {
+		this.cliente = _cliente;
 		this.numeroConta = _numeroConta;
 		this.numeroAgencia = _numeroAgencia;
 		this.saldo = 0.0f;
@@ -23,7 +25,7 @@ public class ContaCorrente {
 	
 	public void depositar(float valor) {
 		this.saldo += valor;
-		DateTimeFormatter formatacaoData = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+		DateTimeFormatter formatacaoData = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");  
 		LocalDateTime dataAtual = LocalDateTime.now();
 		this.registrarTransacao(new Transacao("Deposito", valor, formatacaoData.format(dataAtual).toString()));
 	}
@@ -31,7 +33,7 @@ public class ContaCorrente {
 	public boolean sacar(float valor) {
 		if(saldo - valor > 0) {
 			this.saldo -= valor;
-			DateTimeFormatter formatacaoData = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+			DateTimeFormatter formatacaoData = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");  
 			LocalDateTime dataAtual = LocalDateTime.now();
 			this.registrarTransacao(new Transacao("Deposito", valor, formatacaoData.format(dataAtual).toString()));
 			return true;
