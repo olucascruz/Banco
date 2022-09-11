@@ -18,6 +18,8 @@ public class ContaCorrente {
 		this.numeroConta = _numeroConta;
 		this.numeroAgencia = _numeroAgencia;
 		this.saldo = 0.0f;
+
+		transacoes = new ArrayList<Transacao>();
 	}
 	
 	
