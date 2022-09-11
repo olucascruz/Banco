@@ -1,4 +1,5 @@
-package transacao;
+package banco.negocio.transacao;
+
 
 public class Transacao {
     public String operacao;

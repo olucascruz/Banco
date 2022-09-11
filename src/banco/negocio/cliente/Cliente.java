@@ -1,4 +1,4 @@
-package cliente;
+package banco.negocio.cliente;
 
 public class Cliente {
     public String nome;

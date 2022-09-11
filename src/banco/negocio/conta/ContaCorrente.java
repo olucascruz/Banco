@@ -1,10 +1,10 @@
-package conta;
+package banco.negocio.conta;
 
 import java.util.ArrayList;
 import java.time.format.DateTimeFormatter; 
 import java.time.LocalDateTime;
-import cliente.Cliente;
-import transacao.Transacao;
+import banco.negocio.cliente.Cliente;
+import banco.negocio.transacao.Transacao;
 
 public class ContaCorrente {
 	private float saldo;
