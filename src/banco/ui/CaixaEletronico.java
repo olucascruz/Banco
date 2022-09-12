@@ -33,7 +33,12 @@ public class CaixaEletronico {
         conta.depositar(130.5f);
 
         // d) (0,25 ponto) Saque da conta uma fração do valor que você depositou no item anterior.
-        conta.sacar(35.25f);
+        // Verifica se o saque foi realizado com sucesso.
+        if(conta.sacar(35.25f)) {
+        	System.out.println("Operação realizada com sucesso!");
+        }else {
+        	System.out.println("Operação não realizada por saldo insuficiente.");
+        }
 
         // e) (0,25 ponto) Mostre o número da conta, a agência e o saldo.
         System.out.println("Número da conta: " + conta.getNumeroConta());

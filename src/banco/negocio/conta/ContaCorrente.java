@@ -56,7 +56,7 @@ public class ContaCorrente {
 			//Variavel é definida com a data do deposito
 			LocalDateTime dataAtual = LocalDateTime.now();
 			// c) (1,0 ponto) Uma transação é registrada toda vez que ocorre um saque na conta.
-			this.registrarTransacao(new Transacao("Deposito", valor, formatacaoData.format(dataAtual).toString()));
+			this.registrarTransacao(new Transacao("Saque", valor, formatacaoData.format(dataAtual).toString()));
 			return true;
 		}else {
 			//Se com a subtração o valor ficar negativo a subtração não é feita e retorna false
