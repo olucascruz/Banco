@@ -47,9 +47,9 @@ public class CaixaEletronico {
         System.out.println("\n---------------Extrato Bancário---------------");
         
         for(Transacao t: transacoes){
-            System.out.println(t.operacao + " - " +
-            (String.format("R$%.02f", t.valor)) + " - " +
-            t.dataHora);
+            System.out.println(t.getOperacao() + " - " +
+            (String.format("R$%.02f", t.getValor())) + " - " +
+            t.getDataHora());
         }
     }
 }
