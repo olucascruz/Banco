@@ -18,4 +18,28 @@ public class Cliente {
         this.conta = conta;
     }
 
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void setRg(String rg){
+        this.rg = rg;
+    }
+
+    public void setEndereco(String endereco){
+        this.endereco = endereco;
+    }
+
+    public String getNome(){
+        return this.nome;
+    }
+
+    public String getRg(){
+        return this.rg;
+    }
+
+    public String getEndereco(){
+        return this.endereco;
+    }
+
 }
